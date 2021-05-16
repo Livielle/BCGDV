@@ -22,7 +22,7 @@ public class OrderPriceCalculatorTests
 
         Map<String, Integer> watchIdToOrderedQuantity = watchTestData.getQuantityPerWatchId();
 
-        OrderPriceCalculator orderPriceCalculator = new OrderPriceCalculator();
+        OrderPriceCalculatorImpl orderPriceCalculator = new OrderPriceCalculatorImpl();
         Integer price = orderPriceCalculator.getOrderTotalPrice(watchIdToWatchData, watchIdToOrderedQuantity);
         assertEquals(watchTestData.getExpectedTotalPrice(), price);
     }

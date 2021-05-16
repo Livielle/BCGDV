@@ -6,17 +6,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BadRequestResponseCreator implements ResponseGenerator
+public class ResponseCreatorImpl implements ResponseGenerator
 {
-    public ResponseEntity<CheckoutResponse> getResponse(Throwable exception)
+    public ResponseEntity<CheckoutResponse> getResponse(Integer totalPrice)
     {
         CheckoutResponse checkoutResponse = new CheckoutResponse();
-        checkoutResponse.setErrorMessage(exception.getMessage());
+        checkoutResponse.setPrice(totalPrice);
 
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.set("Content-Type", "application/json");
 
-        return ResponseEntity.badRequest()
+        return ResponseEntity.ok()
                 .headers(responseHeaders)
                 .body(checkoutResponse);
     }

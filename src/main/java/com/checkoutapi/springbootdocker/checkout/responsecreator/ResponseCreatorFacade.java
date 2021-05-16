@@ -1,7 +1,7 @@
 package com.checkoutapi.springbootdocker.checkout.responsecreator;
 
-import com.checkoutapi.springbootdocker.checkout.responsecreator.responsecreators.BadRequestResponseCreator;
-import com.checkoutapi.springbootdocker.checkout.responsecreator.responsecreators.ResponseCreator;
+import com.checkoutapi.springbootdocker.checkout.responsecreator.responsecreators.BadRequestResponseCreatorImpl;
+import com.checkoutapi.springbootdocker.checkout.responsecreator.responsecreators.ResponseCreatorImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 public class ResponseCreatorFacade
 {
     @Autowired
-    private ResponseCreator responseCreator;
+    private ResponseCreatorImpl responseCreator;
 
     @Autowired
-    private BadRequestResponseCreator badRequestResponseCreator;
+    private BadRequestResponseCreatorImpl badRequestResponseCreator;
 
     public ResponseEntity<CheckoutResponse> getResponse(Integer totalPrice)
     {

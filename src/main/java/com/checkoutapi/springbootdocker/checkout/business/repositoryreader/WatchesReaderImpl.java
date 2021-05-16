@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class WatchesReader implements Reader<Watch>
+public class WatchesReaderImpl implements Reader<Watch>
 {
     @Autowired
     WatchRepository watchRepository;

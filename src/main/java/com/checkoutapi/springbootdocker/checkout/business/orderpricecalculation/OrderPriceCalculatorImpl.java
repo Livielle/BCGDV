@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 @Component
-public class OrderPriceCalculator implements PriceCalculator
+public class OrderPriceCalculatorImpl implements PriceCalculator
 {
     public Integer getOrderTotalPrice(Map<String, Watch> watchIdToWatchData, Map<String, Integer> watchIdToOrderedQuantity)
     {

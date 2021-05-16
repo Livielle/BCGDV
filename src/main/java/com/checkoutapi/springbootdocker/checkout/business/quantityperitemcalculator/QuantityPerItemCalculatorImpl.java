@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class QuantityPerItemCalculator implements QuantityCalculator
+public class QuantityPerItemCalculatorImpl implements QuantityCalculator
 {
     public Map<String, Integer> calculate(String[] watchIds)
     {

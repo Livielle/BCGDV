@@ -25,7 +25,7 @@ public class WatchIdsValidatorTests
         }};
 
         assertThrows(WatchNotFoundException.class, () -> {
-            WatchIdsValidator watchIdsValidator = new WatchIdsValidator();
+            WatchIdsValidatorImpl watchIdsValidator = new WatchIdsValidatorImpl();
             watchIdsValidator.validateWatchIds(watchIds, watches);
         });
     }
@@ -47,7 +47,7 @@ public class WatchIdsValidatorTests
         }};
 
         assertDoesNotThrow(() -> {
-            WatchIdsValidator watchIdsValidator = new WatchIdsValidator();
+            WatchIdsValidatorImpl watchIdsValidator = new WatchIdsValidatorImpl();
             watchIdsValidator.validateWatchIds(watchIds, watches);
         });
     }
